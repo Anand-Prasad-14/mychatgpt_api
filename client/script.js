@@ -1,6 +1,6 @@
 import bot from './assets/bot.svg'
 import user from './assets/user.svg'
-import fetch from 'node-fetch'
+
 
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
@@ -87,7 +87,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://mychatgpt-mwno.onrender.com/', {
+    const response = await fetch('https://mychatgpt-mwno.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
